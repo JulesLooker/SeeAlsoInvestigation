@@ -10,6 +10,7 @@
 		84021656148A61C1006F2F5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84021655148A61C1006F2F5F /* Foundation.framework */; };
 		84021659148A61C1006F2F5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84021658148A61C1006F2F5F /* main.m */; };
 		8402165D148A61C1006F2F5F /* SeeAlsoInvestigation.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8402165C148A61C1006F2F5F /* SeeAlsoInvestigation.1 */; };
+		84021665148A61E5006F2F5F /* InvestigationClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 84021664148A61E5006F2F5F /* InvestigationClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,8 +30,11 @@
 		84021651148A61C1006F2F5F /* SeeAlsoInvestigation */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SeeAlsoInvestigation; sourceTree = BUILT_PRODUCTS_DIR; };
 		84021655148A61C1006F2F5F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84021658148A61C1006F2F5F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8402165B148A61C1006F2F5F /* SeeAlsoInvestigation-Prefix.pch */ = {isa = PBXFileReference; path = "SeeAlsoInvestigation-Prefix.pch"; sourceTree = "<group>"; };
+		8402165B148A61C1006F2F5F /* SeeAlsoInvestigation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SeeAlsoInvestigation-Prefix.pch"; sourceTree = "<group>"; };
 		8402165C148A61C1006F2F5F /* SeeAlsoInvestigation.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = SeeAlsoInvestigation.1; sourceTree = "<group>"; };
+		84021663148A61E5006F2F5F /* InvestigationClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvestigationClass.h; sourceTree = "<group>"; };
+		84021664148A61E5006F2F5F /* InvestigationClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvestigationClass.m; sourceTree = "<group>"; };
+		84021666148A6265006F2F5F /* Document1-template.markdown */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Document1-template.markdown"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,9 @@
 			isa = PBXGroup;
 			children = (
 				84021658148A61C1006F2F5F /* main.m */,
+				84021663148A61E5006F2F5F /* InvestigationClass.h */,
+				84021664148A61E5006F2F5F /* InvestigationClass.m */,
+				84021666148A6265006F2F5F /* Document1-template.markdown */,
 				8402165C148A61C1006F2F5F /* SeeAlsoInvestigation.1 */,
 				8402165A148A61C1006F2F5F /* Supporting Files */,
 			);
@@ -98,6 +105,7 @@
 				8402164D148A61C1006F2F5F /* Sources */,
 				8402164E148A61C1006F2F5F /* Frameworks */,
 				8402164F148A61C1006F2F5F /* CopyFiles */,
+				84021667148A648B006F2F5F /* appledoc Script */,
 			);
 			buildRules = (
 			);
@@ -134,12 +142,30 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		84021667148A648B006F2F5F /* appledoc Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "appledoc Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "appledoc \\\n--project-name SeeAlsoInvestigation \\\n--project-company \"The Interface Works\" \\\n--company-id com.TheInterfaceWorks \\\n--output ${CONFIGURATION_BUILD_DIR} \\\n--include ${PROJECT_DIR}/*.markdown \\\n${PROJECT_DIR}";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8402164D148A61C1006F2F5F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				84021659148A61C1006F2F5F /* main.m in Sources */,
+				84021665148A61E5006F2F5F /* InvestigationClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
